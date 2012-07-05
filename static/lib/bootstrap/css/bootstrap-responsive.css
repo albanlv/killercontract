@@ -20,8 +20,8 @@ fieldset { border:none; width:320px;}
 legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
 label { display:block; margin:15px 0 5px;}
 input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
-.prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
-.prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+.prev, .next 
+.prev:hover, .next:hover 
 .prev { float:left;}
 .next { float:right;}
 #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
