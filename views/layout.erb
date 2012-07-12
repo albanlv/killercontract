@@ -38,18 +38,15 @@
   </script>
   
   <!-- insert Facebook social plugin -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=225646797493471";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>
-  
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=389013311165131";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
   <!-- script for twitter button --> 
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </head>
   <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -65,11 +62,11 @@
                     </li>
                   </ul>
                   <ul class="nav pull-right">
-                    <li><a href="/about">A propos  |</a></li>
-                    </li>
                     <li><a href="http://sharelex.org"> Sharelex |</a></li>
                     </li>
                     <li><a href="/about">Nukomeet |</a></li>
+                    </li>
+                    <li><a href="/about">A propos  |</a></li>
                     </li>
                   </ul>
 
@@ -88,15 +85,18 @@
 		<% end %>
     	<%= yield %>
 	</div>
-  <footer>
-  Powered by <a href="http://nukomeet.com">Nukomeet</a> and <a href="http://sharelex.org">Sharelex</a>
-                  <div class="fb-like" data-href="http://lawve.me" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="verdana">
-                  </div>
+    <div class="social">
+<div class="fb-like" data-href="http://statuts-société.fr" data-send="true" data-layout="box_count" data-width="450" data-show-faces="true" data-font="verdana"></div>
                   <!-- Facebook button -->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Entrepreneur? Générez gratuitement des statuts de SAS adaptés." data-via="lawveme" data-lang="fr">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </script>
+         <div class="twitter">
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="Générez gratuitement des statuts personnalisés pour votre SAS" data-via="lawveme" data-count="none" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+        <div class="twitter">
       <a href="https://twitter.com/lawveme" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @lawveme</a>
+    </div>
+  </div>
+  <footer>
   <div class="privacy pull-right">
       <a href="https://www.iubenda.com/privacy-policy/766923" class="iubenda-white  iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; w.addEventListener ? w.addEventListener("load", loader, false) : w.attachEvent("onload", loader);})(window, document);</script>
   </div>
