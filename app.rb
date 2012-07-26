@@ -67,7 +67,7 @@ get '/secure/place' do
 end
 
 post '/killer_contract' do
-  @contrated_name = params[:contracted_name]
+  @contracted_name = params[:contracted_name]
   puts @contracted_name
   @client_name = params[:client_name]
   puts @client_name
