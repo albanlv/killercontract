@@ -66,42 +66,23 @@ get '/secure/place' do
   erb "This is a secret place that only <%=session[:identity]%> has access to!"
 end
 
-post '/statuts' do
-  @company_name = params[:company_name]
-  puts @company_name
-  @company_address = params[:company_address]
-  puts @company_address
-  @activity = params[:activity]
-  puts @activity
-  @date_exercice = params[:date_exercice]
-  puts @date_exercice
-  @capital1 = params[:capital1]
-  puts @capital1
-  @capital2 = params[:capital2]
-  puts @capital2
-  @capital3 = params[:capital3]
-  puts @capital3
-  @capital4 = params[:capital4]
-  puts @capital4
-  @capital5 = params[:capital5]
-  puts @capital5
-  @move = params[:move]
-  puts @move
-  @banque = params[:banque]
-  puts @banque
-  @inalienabilite = params[:inalienabilite]
-  puts @inalienabilite
-  @president_name = params[:president_name]
-  puts @president_name
-  @president_surname = params[:president_surname]
-  puts @president_surname
-  @president_address = params[:president_address]
-  puts @president_address
-  @president_date = params[:president_date]
-  puts @president_date
-  @lieu = params[:lieu]
-  puts @lieu
-  erb :statuts
+post '/killer_contract' do
+  @contrated_name = params[:contracted_name]
+  puts @contracted_name
+  @client_name = params[:client_name]
+  puts @client_name
+  @contracted_address = params[:contracted_address]
+  puts @contracted_address
+  @mission = params[:mission]
+  puts @mission
+  @total_price = params[:total_price]
+  puts @total_price 
+  @price_per_hour = params[:price_per_hour]
+  puts @price_per_hour
+  @date = params[:date]
+  puts @date
+  @payment_schedule = params[:payment_schedule]
+  puts @payment_schedule
 end
 
 get '/welcome' do 
