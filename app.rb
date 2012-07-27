@@ -22,6 +22,10 @@ get '/about' do
     erb :about
 end
 
+get '/website_development_form' do
+    erb :website_development_form
+end
+
 post '/killer_contract' do
   @contracted_name = params[:contracted_name]
   puts @contracted_name
@@ -53,12 +57,6 @@ post '/website_development' do
   puts @company_name
   @company_business = params[:company_business]
   puts @company_business
-  @notice_delay = params[:notice_delay]
-  puts @notice_delay
-  @cure_delay = params[:cure_delay]
-  puts @cure_delay
-  @copyright_delay = params[:copyright_delay]
-  puts @copyright_delay
   @maintenance_period = params[:maintenance_period]
   puts @maintenance_period
   @warranty_period = params[:warranty_period]
@@ -73,6 +71,8 @@ post '/website_development' do
   puts @third_payment
   @price_per_hour = params[:price_per_hour]
   puts @price_per_hour
+  @currency = params[:currency]
+  puts @currency
   
   erb :website_development
 end
