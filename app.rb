@@ -11,7 +11,7 @@ configure do
 end
 
 get '/' do
-  erb :welcome
+  erb :home
 end
 
 get '/welcome' do 
@@ -20,6 +20,10 @@ end
 
 get '/about' do
     erb :about
+end
+
+get '/killer_contract_form' do
+    erb :killer_contract_form
 end
 
 get '/website_development_form' do
