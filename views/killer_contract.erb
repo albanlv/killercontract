@@ -1,20 +1,16 @@
-<p>This contract was generated using Andy Clarke's <a href="http://24ways.org/2008/contract-killer">Killer contract</a>
-<em><p>Disclaimer : We do not aim to provide legal advise and are not liable of what you will do with this contract</p></em>
-<hr/>
-
-<h1>Killer contract</h1>  
+<h1>Website development contract</h1>
 
 <p>Date: <%= Time.now.strftime("%d-%m-%Y")%></p>
 
-<p>Between us <%= @contracted_name %>  and you <%= @client_name %></p>
+<p>Between us, Nukomeet,  and you <%= @client_name %></p>
 
 <h3>Summary: </h3>
 
-<p>We will always do our best to fulfill your needs and meet your goals, but sometimes it is best to have a few simple things written down so that we both know what is what, who should do what and what happens if stuff goes wrong. In this contract you won't find complicated legal terms or large passages of unreadable text. We have no desire to trick you into signing something that you might later regret. We do want what's best for the safety of both parties, now and in the future.</p>
+<p>We will always do our best to fulfill your needs and meet your goals, but sometimes it is best to have a few simple things written down so that we both know what is what, who should do what and what happens if things goes wrong. This contract is intented to ensure the safety of both parties, now and in the future.</p>
 
 <h3>In short</h3>
 
-<p>You (<%= @client_name %>) are hiring us (<%= @contracted_name %>) located at <%= @contracted_address %> to <%= @mission %> for the estimated total price of <%= @total_price %> <%= @currency %> as outlined in our previous correspondence. Of course it's a little more complicated, but we'll get to that.</p>
+<p>You (<%= @client_name %>) are hiring us, located at 17 rue de Javel, 75015 Paris, to <%= @mission %> for the estimated total price of <%= @total_price %> <%= @currency %> as outlined in our previous correspondence.</p>
 
 <h3>What do both parties agree to do? </h3>
 
@@ -22,7 +18,7 @@
 
 <p>We have the experience and ability to perform the services you need from us and we will carry them out in a professional and timely manner. Along the way we will endeavor to meet all the deadlines set but we can't be responsible for a missed launch date or a deadline if you have been late in supplying materials or have not approved or signed off our work on-time at any stage. On top of this we will also maintain the confidentiality of any information that you give us.</p>
 
-<em><h3>Getting down to the nitty gritty </h3></em>
+<em><h3>Details</h3></em>
 
 <h3>Design </h3>
 
@@ -30,13 +26,13 @@
 
 <h3>XHTML/CSS layout templates</h3>
 
-<p>If the project includes XHTML or HTML markup and CSS templates, we will develop these using valid XHTML 1.0 Strict markup and CSS2.1 + 3 for styling. We will test all our markup and CSS in current versions of all major browsers including those made by Apple, Microsoft, Mozilla and Opera. We will also test to ensure that pages will display visually in a Ê»similar', albeit not necessarily an identical way, in Microsoft Internet Explorer 6 for Windows as this browser is now past it's sell-by date.</p>
+<p>If the project includes XHTML or HTML markup and CSS templates, we will develop these using valid XHTML 1.0 Strict markup and CSS2.1 + 3 for styling. We will test all our markup and CSS in current versions of all major browsers including those made by Apple, Microsoft, Mozilla and Opera. We will also test to ensure that pages will display visually in a similar, albeit not necessarily an identical way, in all these browsers.</p>
 
-<p>We will not test these templates in old or abandoned browsers, for example Microsoft Internet Explorer 5 or 5.5 for Windows or Mac, previous versions of Apple's Safari, Mozilla Firefox or Opera unless otherwise specified. If you need to show the same or similar visual design to visitors using these older browsers, we will charge you at the daily rate set out in our original estimate for any necessary additional code and its testing.</p>
+<p>We will not test these templates in old or abandoned browsers, for example Microsoft Internet Explorer 5, 5.5 or 6 for Windows or Mac, previous versions of Apple's Safari, Mozilla Firefox or Opera unless otherwise specified. If you need to show the same or similar visual design to visitors using these older browsers, we will charge you at the daily rate set out in our original estimate for any necessary additional code and its testing.</p>
 
 <h3>Text content </h3>
 
-<p>We may have written a best-seller but we're not responsible for writing or inputting any text copy unless we specified it in the original estimate. We'll be happy to help though, and in addition to the estimate we will charge you at <%= @price_per_hour %> <%= @currency %> per hour for copy writing or content input. </p>
+<p>We're not responsible for writing or inputting any text copy unless we specified it in the original estimate. We'll be happy to help though, and in addition to the estimate we will charge you at <%= @price_per_hour %> <%= @currency %> per hour for copy writing or content input. </p>
 
 <h3>Photographs </h3>
 
@@ -49,16 +45,18 @@
 <p>The estimate/quotation prices at the beginning of this document are based on the number of days that we estimate we'll need to accomplish everything that you have told us you want to achieve. If you do want to change your mind, add extra pages or templates or even add new functionality, that won't be a problem. You will be charged the daily rate set out in the estimate we gave you. Along the way we might ask you to put requests in writing so we can keep track of changes.</p>
 
 <h3>Technical support </h3>
+<% if @hosting == 'no'%>
+<%= "You are responsible for your website/application installing, deploying and hosting on your own server." %>
+<% elsif @hosting == 'yes' %>
+<%= "We are responsible for the website hosting, at one of our preferred, third-party hosting providers. We will charge you a one-off fee for installing your site on this server, plus any statistics software (Google Analytics). We are not a web site hosting company and so we do not offer or include technical support for web site hosting, email or other services relating to web site hosting. Whatsoever, if you need any update, management or support on server issue, we'll be happy to help and will charge you #{@price_per_hour} #{@currency} per hour." %>
+<% end %>
 
-<p>You may already have professional web site hosting, you might even manage that hosting in-house; if that's the case, great. If you don't manage your own web site hosting, we can set up an account for you at one of our preferred, third-party hosting providers. We will charge you a one-off fee for installing your site on this server, plus any statistics software such as Mint or Google Analytics; then the updates to, and management of that server, plus any support issues will be up to you.</p>
 
-<p>We are not a web site hosting company and so we do not offer or include technical support for web site hosting, email or other services relating to web site hosting. If you do require help with anything beyond the design and development of your site, we'll be happy to help and will charge you <%= @price_per_hour %> <%= @currency %> per hour.</p>
-
-<h3>Legal stuff </h3>
+<h3>Legal </h3>
 
 <p>We can't guarantee that the functions contained in any web page templates or in a completed web site will always be error-free and so we can't be liable to you or any third party for damages, including lost profits, lost savings or other incidental, consequential or special damages arising out of the operation of or inability to operate this web site and any other web pages, even if you have advised us of the possibilities of such damages.</p>
 
-<p>If any provision of this agreement shall be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from this agreement and shall not affect the validity and enforceability of any remaining provisions.   Phew.</p>
+<p>If any provision of this agreement shall be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from this agreement and shall not affect the validity and enforceability of any remaining provisions.</p>
 
 <h3>Copyrights </h3>
 
@@ -70,24 +68,27 @@
 
 <p>You also own text content, photographs and other data you provided, unless someone else owns them. We own the XHTML markup, CSS and other code and we license it to you for use on only this project. </p>
 
-<p>We love to show off our work and share what we have learned with other people, so we also reserve the right to display and link to your completed project as part of our portfolio and to write about the project on web sites, in magazine articles and in books about web design. </p>
+<p>We also reserve the right to display and link to your completed project as part of our portfolio and to write about the project on web sites, in magazine articles and in books about web design, unless you explicitly specify that you do not want so.</p>
 
 <h3>Payments </h3>
 
-<p>We are sure you understand how important it is as a small business that you pay the invoices that we send you promptly. As we're also sure you'll want to stay friends, you agree to stick tight to the following payment schedule. </p>
+<p>By signing this contract, you agree to the following payment schedule. </p>
 
-<p><%= @payment_schedule %></p>
+<p>Three installments divided between:</p>
+<p>⅓ before starting</p>
+<p>⅓ at the middle of the project</p>
+<p>The remaining upon delivery</p>
 
-<p>But where is all the horrible small print? </p>
+<p>We will start  only once the first installment is received. We stop all work if the second is not received on time, and we deliver the access/ or deploy the final version only once the last payment is received.</p>
 
-<p>Just like a parking ticket, you cannot transfer this contract to anyone else without our permission. This contract stays in place and need not be renewed. If for some reason one part of this contract becomes invalid or unenforceable, the remaining parts of it remain in place. </p>
+<p>You cannot transfer this contract to anyone else without our permission. This contract stays in place and need not be renewed. If for some reason one part of this contract becomes invalid or unenforceable, the remaining parts of it remain in place. </p>
 
-<p>Although the language is simple, the intentions are serious and this contract is a legal document under exclusive jurisdiction of <%= @country %> courts. Oh and don't forget those men with big dogs.</p>
+<p>Although the language is simple, the intentions are serious and this contract is a legal document under exclusive jurisdiction of <%= @country %> courts.</p>
 
 <h3>The dotted line </h3>
 
-<p>Signed by and on behalf of <%= @contracted_name %></p> 
-<p>Signed by and on behalf of <%= @client_name %> </p> 
+<p>Signed by and on behalf of Nukomeet</p>
+<p>Signed by and on behalf of <%= @client_name %> </p>
 <p>Date: <%= Time.now.strftime("%d-%m-%Y")%></p>
 
 <p>Everyone should sign above and keep a copy for their own records.</p>

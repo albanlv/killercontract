@@ -1,13 +1,11 @@
 <div class="row">
   <div class="span6">
-    <h1>Killer contract</h1>
-    <p><em>Fill in the form to get your killer contract for website design and development. It is free and we do not collect your data</em></p>
+    <h1>Nukontract</h1>
+    <p><em>Fill in the form to get your contract for website design and development.</em></p>
     <form action='/killer_contract' id="SignupForm" method='post'>
       <fieldset>
-        <legend>The people</legend>
+        <legend>The client</legend>
         <p>&nbsp;</p>
-        <p> <input type='text' placeholder='Enter your company name' name='contracted_name'/>
-            <input type='text' placeholder='Your address' name= 'contracted_address'/>
             <input type='text' placeholder='Your client name' name='client_name'/>
         </p>
       </fieldset>
@@ -16,12 +14,20 @@
         <legend>The mission</legend>
         <p>&nbsp;</p>
         <p> <input type='text' placeholder='Describe shortly the mission' name='mission'/>
+        <p>Is Nukomeet in charge of setting up the hosting?</p>
+        <p><label for="hosting">Yes</label><input type="radio" name='hosting' value="yes" id="yes" checked="checked" /></p>
+                            <label for="associes">No</label><input type="radio" name='hosting' value="no" id="no" />
+
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment</legend>
+        <p>  <input type='text' placeholder='The rate per hour for this mission' name='rate_per_hour'/>
             <input type='number' placeholder='Total price' name= 'total_price'/>
-            <input type='text' placeholder='The rate per hour for this mission' name='rate_per_hour'/>
-            <input type='text' placeholder='Your currency' name='currency'/>
-            <input type='text' placeholder='Describe the payment schedule' name='payment_schedule'/>
-        </p>  
-        <button class="btn btn-danger btn-large pull-right" type='submit'/>Make me a killer contract</button>
+            <input type='text' placeholder='Currency' name='currency'/>
+        </p>
+        <button class="btn btn-danger btn-large pull-right" type='submit'/>Launch your sortilege</button>
       </fieldset>
     </form>
   </div>
@@ -31,11 +37,11 @@
       <p>The killer contract is a simplified and easy to read bullet proof website design and development contract based on a template shared by <a href="http://24ways.org/2008/contract-killer">Andy Clarke</a></p>
       <a href="/killer_contract_form"><button class="btn btn-danger btn-large pull-right">I want it</button></a>
     </div>
-    <div class="well">
+    <!-- <div class="well">
      <h3>Web design and development contract</h3>
      <p>A serious and reliable contract for website design and development, based on a template shared by <a href="http://www.appleseedhosting.com/">Appleseed Hosting</a></p>
     <a href="/website_development_form"> <button class="btn btn-danger btn-large pull-right">I want it</button></a>
-  </div>
+  </div>-->
   </div>
 </div>
 </div>
